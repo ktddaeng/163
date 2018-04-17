@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 2</title>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <div class="header1">
+        <h1>Homework 2</h1>
+        <p>by Kim Dang</p>
+    </div>
+    <div class="imgwrap">
+        <img src="cover.png">
+        <p><a target="_blank" href="https://public.tableau.com/profile/kim8151#!/vizhome/152AH2/Sheet1">
+            Screenshot of the Tableau generated visualization</a>
+            </a></p>
+    </div>
+    <hr>
+    <div class="body1">
+        <h2>description</h2>
+        <p>The dataset used is <a target="_blank" href="https://data.lacity.org/A-Prosperous-City/Los-Angeles-International-Airport-Passenger-Traffi/g3qu-7q2u">
+            LAX Passenger Counts by Terminal</a>, but the data has been filtered down to show only the total
+        passenger counts for arrivals from International flights between the years 2014 and 2017. The choice for
+            visualization is a scatter plot, because an attribute like position is effective for showing both
+            ordered data, which is the case for the data we're observing.</p>
+            <p>The marks are the total passenger counts reported in a given month and year,
+            portrayed as points on the scatter plot. The channels are the horizontal position to present
+            the categorical attribute of month and year and the vertical position to present the quantitative attribute
+            of total passenger count. The color of the points are not meant to represent anything and are only
+        orange to stand out from the rest of the plot.</p>
+        <p>The plot also has some interactivity.  The mark will be noticeably outlined in black when moused over to help
+            users keep track of which mark to learn about more specific information about the mark, such as the year
+            and exact number of passengers arriving. This is to help give more detail to the plot since the chart is
+            certainly sized down to fit the web page and to also not overwhelm the user with information. Extra
+            information should only be visible at the user's request.</p>
+        <p>While the scatter plot is a decent way to portray quantified information, users may have difficulty seeing the
+        difference between quantities that are very close to each other and also close by date. While the extra information
+        on mouseover helps resolve this issue, there are other methods to alleviate this problem. Instead of using dots
+        as marks, the scatter plot could be redone into a bar chart so users can better compare the tops of the bar areas.
+        Another way could be to enable the mouse to act as the center of a cross-hair that spans the visualization to allow
+            not only comparison of nearby marks, but also marks that are not close to each other on the chart.</p>
+    </div>
+    <hr>
+    <h2>Total International Arrivals at LA Intl Airport</h2>
+    <div id="d3rep"></div>
+</body>
+</html>

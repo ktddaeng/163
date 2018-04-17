@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 1</title>
+    <style>
+        body {
+            background: #f7f7f7;
+            text-align: center;
+            font-family: "Bookman Old Style", Bookman, serif;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: -20px;
+            font-family: "Arial Narrow", Helvetica, sans-serif;
+        }
+        h1::before{
+            content: "{ "
+        }
+        h1::after{
+            content: " }";
+        }
+        .header1 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: cornflowerblue;
+        }
+        .header1 p{
+            padding-top: 12px;
+        }
+
+
+        img {
+            max-width: 900px;
+            height: auto;
+        }
+        .imgwrap {
+            margin:0;
+            padding:0;
+        }
+        a {
+            text-decoration: none;
+            color: #8c8b8b;
+        }
+        a:hover{
+            color: black;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: normal;
+            color: cornflowerblue;
+            font-family: "Arial Narrow", sans-serif;
+        }
+        h2::before{
+            content: "{ ";
+        }
+        h2::after{
+            content: " }";
+        }
+        hr {
+            border-top: 1px dotted #8c8b8b;
+            border-bottom: 1px dotted #f7f7f7;
+            max-width: 700px;
+        }
+
+        .body1 {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+            padding-bottom: 100px;
+        }
+        .body1 p{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h1>Homework 1</h1>
+        <p>by Kim Dang</p>
+        <!--Header containing a title and your name.-->
+    </div>
+    <div class="imgwrap">
+        <img src="cover.png">
+        <!--Screenshot image of the visualization or web page.-->
+        <p><a target="_blank" href="https://www.washingtonpost.com/graphics/national/mass-shootings-in-america/#g-gun-deaths-injuries-box">
+            "40 States and the District" by by Richard Johnson, Dan Keating and Ted Mellnik from <i>The Washington Post</i></a>
+        </a></p>
+        <!--Hyperlink to the source page that you got the visualization from.-->
+    </div>
+    <div class="body1">
+        <hr>
+        <h2>description</h2>
+        <p>The interactive visualization pictured above is part of an article about the extent of gun violence
+            in the United States. The map displays the location of shootings in the United States in the past 40 years. The circles
+        represent the locations of the shootings, and the size of the circles indicate the estimate number of victims.
+        When the circles are interacted with, a small window beside the circle displays specific information about the shooting, such as the
+            name of the location, the number of victims, and the date of the shooting. When users interact with the circles,
+        the circles respond by being brought to the front of the page and bolded with a black outline
+        to set itself apart from the other circles. In the paragraph above the map, bolded words are underlined with a color
+        such that when interacted with, all circles with the corresponding color are bolded and brought to the front of the page.</p>
+
+        <p>The visualization is minimal and easy to understand, making it a good visualization for online readers.
+            Displaying the location of the shootings help users understand the spatial relation between the different shootings.
+            Hiding the details of each shooting also makes understanding the visualization less overwhelming than having all the
+            numbers and names in a table. For a professional, clean look, the map itself is white to not distract from the most
+            important part of the visualization, the circle pins, which are colored with mute colors instead of bold, blinding colors
+            that can make users uncomfortable. The designers overcome the limitations of a geometry dataset for the shooting
+            locations by combining it with flat table containing attributes to allow not just the display of positions, but also
+            quantities. All in all, we gain a greater insight to where these shootings occur the most in a cleverly designed
+            and aesthetically pleasing environment with this visualization.</p>
+    </div>
+</body>
+</html>

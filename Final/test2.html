@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+<button onclick="changeNation()">Click Me</button>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+
+<!-- I recommend you host this file on your own, since this will change without warning -->
+
+<div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+<script>
+    //$('#container').datamaps();
+    var data = {
+        PHL: { fillKey: 'Overdue' },
+        USA: { fillKey: 'Overdue' },
+        DEU: { fillKey: 'Overdue' },
+        BRA: { fillKey: 'Overdue' },
+        SWE: { fillKey: 'Overdue' },
+        MEX: { fillKey: 'Overdue' },
+        ESP: { fillKey: 'Overdue' },
+        NLD: { fillKey: 'Overdue' },
+        GBR: { fillKey: 'Overdue' },
+        AUS: { fillKey: 'Overdue' }
+    };
+    var keys =  ["PHL", "USA", "DEU", "BRA", "SWE", "MEX", "ESP", "NLD", "GBR", "AUS"];
+    var skeys = ["ph", "us", "de", "br", "se", "mx", "es", "nl", "gb", "au", "global"];
+
+    var election = new Datamap({
+        scope: 'world',
+        element: document.getElementById('container'),
+        projection: 'mercator',
+        fills: {
+            defaultFill: '#afa99a',
+            Overdue: '#8c788a',
+            Acknowledged: '#74277d'
+        },
+        geographyConfig: { },
+        data: data
+    });
+
+    window.setInterval(function() {
+        for (var i = 0; i < keys.length; i++){
+            data[keys[i]].fillKey = 'Acknowledged';
+        }
+        election.updateChoropleth(null, {reset: true});
+    }, 1000);
+
+    function changeNation(){
+        var ind2 = Math.floor(Math.random() * skeys.length);
+        var nat = skeys[ind2];
+
+        if (nat == "global"){
+            for (var i = 0; i < keys.length; i++){
+                data[keys[i]].fillKey = 'Acknowledged';
+            }
+            console.log("here");
+        } else {
+            var ind = skeys.indexOf(nat);
+            for (var i = 0; i < keys.length; i++){
+                if (i == ind){
+                    data[keys[ind]].fillKey = 'Acknowledged';
+                } else {
+                    data[keys[i]].fillKey = 'Overdue';
+                }
+            }
+            election.updateChoropleth(data);
+        }
+    }
+</script>
+</body>

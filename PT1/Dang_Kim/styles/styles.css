@@ -1,0 +1,162 @@
+html {
+    background-color: #212121;
+    color: #bbbbbb;
+}
+body {
+    font-family: "Arial Narrow", "Helvetica", sans-serif;
+    text-align: center;
+    padding-bottom: 100px;
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: -20px;
+    font-family: "Arial Narrow", Helvetica, sans-serif;
+}
+h1::before{
+    content: "{ ";
+}
+h1::after{
+    content: " }";
+}
+.header1 {
+    padding-top: 40px;
+}
+.header1 p{
+    padding-top: 12px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #bbbbbb;
+    font-family: "Arial Narrow", sans-serif;
+}
+h2::before{
+    content: "{ ";
+}
+h2::after{
+    content: " }";
+}
+
+h3 {
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+hr {
+    border-top: 1px dotted #bbbbbb;
+    border-bottom: 1px dotted #212121;
+    max-width: 700px;
+}
+
+
+
+img {
+    max-width: 900px;
+    height: auto;
+}
+.imgwrap {
+    margin:0;
+    padding:0;
+}
+
+.p2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #8c8b8b;
+}
+a:hover{
+    color: white;
+}
+
+.divtext {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.axis .domain {
+    display: none;
+    color: #212121;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #bbbbbb;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    fill: #bbbbbb;
+}
+rect {
+    shape-rendering: crispEdges;
+}
+
+.c1 {
+    background-color: #404080;
+    color: #404080;
+}
+.c2 {
+    background-color: #804040;
+    color: #804040;
+}
+
+.c3 {
+    background-color: #2E86AB;
+    color: #2E86AB;
+}
+.c4 {
+    background-color: #A23B72;
+    color: #A23B72;
+}
+.c5 {
+    background-color: #CE7B91;
+    color: #CE7B91;
+}
+.c6 {
+    background-color: #F18F01;
+    color: #F18F01;
+}
+
+.c7 {
+    background-color: #554971;
+    color: #554971;
+}
+.c8 {
+    background-color: #63768D;
+    color: #63768D;
+}
+.c9 {
+    background-color: #8AC6D0;
+    color: #8AC6D0;
+}
+.c10 {
+    background-color: #B8F3FF;
+    color: #B8F3FF;
+}
+
+
+.c11 {
+    background-color: #D62828;
+    color: #D62828;
+}
+.c12 {
+    background-color: #F77F00;
+    color: #F77F00;
+}
+.c13 {
+    background-color: #FCBF49;
+    color: #FCBF49;
+}
+.c14 {
+    background-color: #EAE2B7;
+    color: #EAE2B7;
+}

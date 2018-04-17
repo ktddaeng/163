@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 1: Gender, Mental Health, and the Tech Industry</title>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <script type="text/javascript" src="./scripts/d3.layout.cloud.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <div class="header1">
+        <h1>Project 1: Gender and Mental Health in Tech</h1>
+        <p>by Kim Dang</p>
+    </div>
+    <div class="divtext">
+        <p>The dataset that will be explored in this assignment is from the <a target="_blank" href="https://www.kaggle.com/osmi/mental-health-in-tech-survey">
+            Survey on Mental Health in the Tech Workplace in 2014</a>, provided by Open Sourcing Mental Illness, LTD.
+            The data obtained comes from a 2014 survey conducted on mental health disorders in the tech workplace. For
+            this project, I will explore the role that gender plays into developing a mental health-positive workplace
+            in the tech industry.
+        </p>
+    </div>
+
+    <h2>Question #1</h2>
+    <h3>Are men more or less likely to seek treatment than women?</h3>
+    <div id="q1"></div>
+    <div id="q1_legend"></div>
+    <div class="divtext">
+        <p>Let's first examine mental illness and gender. I hypothesize that those who identify as male are not as likely to seek help with one's own mental illnesses in the workplace.
+            Because conventional gender roles for men often involve appealing less to one's emotional side, men may not even
+        be aware of the symptoms of mental illness. However, women may be less likely to seek help as well, out of worry that
+        their need for emotional help can be construed as a weakness at work. Let's see which of the two sides will prevail
+        over the other.</p>
+        <p>The visualization above is a segmented bar graph depicting gender as one channel, one for if the subject
+            identifies as a male, and one if they identify as female. Since survey subjects can
+            enter whatever response they choose, we must make sure that we filter the data closely to include various answers
+            including that of transgender individuals. A second channel
+            is the color of the portions of the two bars as indicated in the legend below the graph, and
+            the fraction of the bar that is colored, indicating the ratio of those who did seek help or did not seek help. According
+            to the chart, we can observe that the ratio of men seeking help is higher than that of women, which confirms our second
+            proposed hypothesis rather than the first. We will use these
+            results for a later question.
+        </p>
+    </div>
+
+    <h2>Question #2</h2>
+    <h3>Which benefits are linked to each other?</h3>
+    <div id="q3"></div>
+    <p class="p2"><b>(Click and drag!)</b> An undirected graph of various benefits appearing together in a response</p>
+    <div class="divtext">
+        <p>The most popular mental-health benefit is likely included with other perks, but which are intrinsically linked to each other??
+            The following questions are labeled as such in the weighted undirected graph:
+        <ul>
+        <li><b>Benefits</b> - Does your employer provide mental health benefits?</li>
+        <li><b>DiscEmp</b> - Do you think that discussing a mental health issue with your employer would have negative consequences?</li>
+        <li><b>DiscCowkr</b> - Would you be willing to discuss a mental health issue with your coworkers?</li>
+        <li><b>DiscSuper</b> - Would you be willing to discuss a mental health issue with your direct supervisor(s)?</li>
+        <li><b>MHSerious</b> - Do you feel that your employer takes mental health as seriously as physical health?</li>
+        <li><b>Anon</b> - Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources?</li>
+        <li><b>Wellness</b> - Has your employer ever discussed mental health as part of an employee wellness program?</li>
+        <li><b>Leave</b> - How easy is it for you to take medical leave for a mental health condition?</li>
+        </ul>
+        </p>
+        <p>
+        These questions are the marks, or in this case, nodes, for the undirected graph. Links are drawn between the nodes
+        only if there is a significant amount of correlation between each pair of nodes (meaning there is more than 100 matches). This amount
+            also defines the thickness of the link, so we can see how strong the link between each question is with the other. Since can be hard
+        to read form a static perspective, the graph has been made interactive, so you can click and drag on the nodes. Any stray
+        marks will remain in the enclosed space and will not fly away because of gravity.</p>
+        <p>
+        We see that when a company provides benefits for mental health, other perks such as going on leave, anonymity,
+        supervisor support, taking mental health seriously go together often. Yet there is not a strong link between discussing
+        with coworkers and company benefits since coworkers are like not obligated to deal with their coworkers' problems.
+        Interestingly, there is little correlation between any of the benefits and feeling welcome to talk to one's employer about
+        mental health issues. Wellness doesn't seem to hold as strong a weight as the other benefits do, which would mean that
+            companies consider mental health services as separate from employee wellness programs.
+        </p>
+    </div>
+
+    <h2>Question #3</h2>
+    <h3>Which states with tech companies are more likely to offer mental health services?</h3>
+    <div id="q2"></div>
+    <p class="p2">
+        Word Clouds of Mental Health-Positive States for Tech Companies
+    </p>
+    <div class="divtext">
+        <p>For our third question, we need some help to narrow down our options to the more popular choices and tech companies in particular.
+            I hypothesize that tech companies in metropolitan areas are more likely to be more open-minded, and many companies
+            likely try to offer mental health services to compete with the other various companies for future employees. Using
+            <a target="_blank" href="https://github.com/jasondavies/d3-cloud">Jason Davies' Word Cloud Layout plugin</a>, the visualization above is a
+            word cloud of the different states that have tech companies that offer mental health care.
+            The larger the state's abbreviation, the higher the number of companies that offer mental health care benefits. To also help categorize
+            the size of the words and see which words stand out, large words are colored light blue, medium words are colored grey blue,
+            and small words are colored dark purple. A threshold was set to select to highlight any major states that have high amounts
+            of mental health positive companies.
+        </p>
+        <p>Predictably, California ranks first above the other states for since many tech-companies are based in the Silicon Valley
+            and Los Angeles. From what I've gathered from various news outlets, the highlighted states are often among the most
+            hi-tech states in the country, populated with tech companies. We will use the brightest colored states for our next question.</p>
+    </div>
+
+    <h2>Question #4</h2>
+    <h3>For men and women in tech, which states offer which perks?</h3>
+    <div id="q4"></div>
+    <p class="p2">A sunburst chart of how many perks received by the two majority genders get in each top-mental-health-positive state</p>
+    <div class="divtext">
+        <p>For our final question, we would like to know where, if we were a man or woman, should go if we want a job that has a
+        mental health positive environment? For this we use a sunburst partition map. We choose the top three or four states that provide health care services from
+        Question 3 and then count how many instances we get a "yes" answer like in Question 2, focusing mostly on the perks that are linked the most.
+            We also classify by gender, and color and label accordingly. Very small numbers are cut for simplification purposes. In
+        addition to displaying all three levels of quantities, we also color each layer in a gradient for easier viewing.</p>
+        <p>Overwhelmingly, identifying as male in both California and Oregon most certainly guarantees the most benefits, while
+        identifying as female means likely having more perks for mental health in mostly California, but not as much in the other two
+            states. Looking back to our results from Question 1, there is
+            an implication that women don't have as many perks as men do because they don't seek help.</p>
+    </div>
+
+    <h2>Conclusion</h2>
+    <div class="divtext">
+        <p>
+            One of the many issues in the tech industry workplace is gender inequality, and this also includes how mental health
+            is handled. As said before, negative gender roles towards women lead female
+            workers in tech to undertake stressful conditions and perhaps hiding their condition, unlike men, who do not have
+            as much to fear from revealing their mental health issues. This was surprising to me after the first question, because
+            it appears that even in an environment where masculinity reigns supreme, men are still able to reach out for help.
+            And even though states like California home many tech companies and take a progressive view on
+            issues like mental health, women are still somewhat left behind.
+
+        </p>
+        <p>But the situation doesn't have to stay this way.</p>
+        <p>If more women become involved in the tech industry, perhaps women can be able to contribute more to
+            how their company deals with mental health. As seen by California in Question 4, the higher number
+            of women correlates with higher number of mental health benefits. Once California sets the precedence to how mental
+            health is handled, their practices may likely spill over to other states. If we were to explore this line of questioning more,
+            one important factor to consider would be time.
+        Analyzing the progression of the increase in mental health benefits for both men and women in all parts of the world
+        could give insight to whether my deductions in this conclusion hold true.</p>
+    </div>
+</body>
+</html>

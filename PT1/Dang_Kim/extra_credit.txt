@@ -1,0 +1,3 @@
+I would like to specify parts of my project for extra credit.
+
+For Question 2, I've made the visualization interactive by mouse. The visualization uses D3's native force layout to allow the nodes of the graph to move fluidly with the user's mouse dragging the nodes of the graph. The labels of the node also follow the node as well. This should count for including chart interactivity and animation in the charts.
