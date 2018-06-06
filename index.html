@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 2 by Kim Dang</title>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <!--<a href="https://catalog.data.gov/dataset/summary-of-recall-cases-in-calendar-year">The Dataset used is FSIS' Summary of Recall Cases in Calendar Year</a>-->
+    <div class="wrap">
+        <div class="header1">
+            <h1>Project 2: Food Recall History</h1>
+            <p>by Kim Dang</p>
+        </div>
+        <h2 class="labeltext">Distribution of Food Recalls By Year</h2>
+        <div id="v1">
+            Select a year:
+            <select id="timeSelect" onchange="onTimeChange()">
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="All" selected="selected">All</option>
+            </select>
+            <div id="q2"></div>
+            <div id="vv1"></div>
+            <p>Select on the different slices to select ingredients to evaluate.<br>
+                If you cannot see the labels, hover over the slices.</p>
+        </div>
+        <div class="wrap2">
+            <div id="v2">
+                <h2 class="labeltext">Distribution of Recall Severity</h2>
+                <div id="vv2"></div>
+            </div>
+            <div id="v3">
+                <h2 class="labeltext">Associated Reason with Ingredient(s)</h2>
+                <p>Click and drag!</p>
+                <div id="vv3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
